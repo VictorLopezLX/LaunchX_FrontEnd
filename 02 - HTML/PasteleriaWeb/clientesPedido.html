@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Nature's Cake - Pedido</title>
+</head>
+<body>
+    
+  <div class="jumbotron" style="background-color: purple; background-image: radial-gradient(circle at 71.41% 108.83%, #ff5ce0 0, #ed52e5 12.5%, #d549ea 25%, #b741ee 37.5%, #923cf2 50%, #5f3af6 62.5%, #003cf9 75%, #003efc 87.5%, #0041fe 100%); color: white; font-weight: bold; margin:0;">
+    <h1 class="display-4">TU COMBINACION FAVORITA</h1>
+    <p class="lead">Selecciona el mejor sabor y decoralo a tu gusto con nuestra preselección especialmente pensada para ti</p>
+    <hr class="my-4">
+  </div>
+
+  <div class="container">
+    
+    <!-- SABORES Y DECORACION -->
+    <div class="accordion" id="accordionExample">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              SABORES
+            </button>
+          </h2>
+        </div>
+    
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body">
+            <div class="card" style="width: 16rem; display: inline-block;">
+              <img width="150px" height="150px" src="https://us.123rf.com/450wm/belchonock/belchonock1808/belchonock180839107/106418929-tarro-con-mermelada-de-melocot%C3%B3n-y-fruta-fresca-sobre-fondo-blanco-.jpg?ver=6" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Durazno</h5>
+                <p class="card-text">Jalea de durazno con pedacitos de fruta fresca!!</p>
+              </div>
+            </div>
+
+            <div class="card" style="width: 16rem; display: inline-block;">
+              <img width="150px" height="150px" src="data:image/jpeg;base64,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" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">FRESA</h5>
+                <p class="card-text">Mermelada natural con trocitos de fresa</p>
+              </div>
+            </div>
+
+            <div class="card" style="width: 16rem; display: inline-block;">
+              <img width="150px" height="150px" src="https://st2.depositphotos.com/5473448/8078/i/600/depositphotos_80786724-stock-photo-blackberry-jam-and-blackberries.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Moras</h5>
+                <p class="card-text">Jalea de moras dulces y acidas</p>
+              </div>
+            </div>
+
+            <div class="card" style="width: 16rem; display: inline-block;">
+              <img width="150px" height="150px" src="https://img2.freepng.es/20180130/zte/kisspng-macadamia-nut-food-australia-and-hawaii-fruit-nut-butter-5a70a5379149e9.2918120915173317675951.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Nuez de Macadamia</h5>
+                <p class="card-text">Crujiente nuez de macadamia macerada</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              DECORACIÓN
+            </button>
+          </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body">
+            <div class="card" style="width: 16rem; display: inline-block;">
+              <img width="150px" height="150px" src="https://cdn2.cocinadelirante.com/sites/default/files/images/2021/07/decorar-un-pastel-y-hacerlo-ligero-y-saludable.jpg">
+              <div class="card-body">
+                <h5 class="card-title">FRUTAL</h5>
+                <p class="card-text">Decorado con las frutas naturasles o en conserva de tu eleccion.</p>
+              </div>
+            </div>
+
+            <div class="card" style="width: 16rem; display: inline-block;">
+              <img width="150px" height="150px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGWHiXKXSLbUPweV36AagFdh0jM_L3I37p-i9FeWp_BWVal_rzirb6ERc1wSs1y-PoBmU&usqp=CAU">
+              <div class="card-body">
+                <h5 class="card-title">CHOCOLATE</h5>
+                <p class="card-text">Chocolate, chocolate, chocolate... amargo, dulce, combinado, tu decides!!</p>
+              </div>
+            </div>
+
+            <div class="card" style="width: 16rem; display: inline-block;">
+              <img width="150px" height="150px" src="https://www.wiltonenespanol.com/wp-content/uploads/2019/07/Formas-de-decorar-un-pastel-2.jpg">
+              <div class="card-body">
+                <h5 class="card-title">CHANTILII</h5>
+                <p class="card-text">Clasico e inolvidable. Que no falte en tu fiesta..</p>
+              </div>
+            </div>
+
+            <div class="card" style="width: 16rem; display: inline-block;">
+              <img width="150px" height="150px" src="https://i.pinimg.com/originals/35/81/28/3581289503c00571aa1cd69a419707da.jpg">
+              <div class="card-body">
+                <h5 class="card-title">FONDANT</h5>
+                <p class="card-text">Haz que parezca real, pero con el mejor sabor..</p>
+              </div>
+            </div>
+
+            <div class="card" style="width: 16rem; display: inline-block;">
+              <img width="150px" height="150px" src="https://gastronomiaycia.republica.com/wp-content/uploads/2015/04/como_hacer_guirnalda_pastel-680x510.jpg">
+              <div class="card-body">
+                <h5 class="card-title">FIGURAS</h5>
+                <p class="card-text">Decora a lo grande y con estilo</p>
+              </div>
+            </div>
+
+            <div class="card" style="width: 16rem; display: inline-block;">
+              <img width="150px" height="150px" src="https://i.pinimg.com/564x/06/21/4d/06214d77c47b193a3cadf601b5a19c09.jpg">
+              <div class="card-body">
+                <h5 class="card-title">IMAGEN</h5>
+                <p class="card-text">Tu propio diseño o un recuerdo* con la mayor calidad</p>
+                <p style="font-size: 8px;">fotografia imprimible</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+    </div>
+
+
+    <!-- PEDIDO -->
+    <div class="container border border-primary" style="background-color: #f0f3f7; border-radius: 10px;;">
+      <div class="row">
+        <div class="col-sm">
+          <h1><span class="badge badge-info">Mi Pedido</span></h1>
+          <br>
+
+          <form>
+            <div class="form-group row">
+              <label for="inputPassword" class="col-sm-2 col-form-label">Nombre:</label>
+              <div class="col-sm-10">
+                <input class="form-control" type="text" placeholder="Nombre">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+              <div class="col-sm-10">
+                <input class="form-control" type="text" placeholder="email@example.com">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+              <div class="col-sm-10">
+                <input class="form-control" type="text" placeholder="email@example.com">
+              </div>
+            </div>
+            
+
+            <div class="form-group row">
+              <label for="staticEmail" class="col-sm-2 col-form-label">Sabores</label>
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Durazno
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Fresa
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Moras
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Nuez de macadamia
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="staticEmail" class="col-sm-2 col-form-label">Decoración</label>
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Frutal
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Chocolate
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Chantilli
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Fondant
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Figuras
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Imagen
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="staticEmail" class="col-sm-2 col-form-label">Descripcion del pedido</label>
+              <div class="col-sm-10">
+                <textarea class="form-control" aria-label="With textarea"></textarea>
+              </div>
+            </div>
+            
+
+            <button type="reset" class="btn btn-primary">Restablecer formulario</button>
+            <button type="submit" class="btn btn-primary">Realizar pedido</button>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<br>      
+<br>
+<br>
+<br>      
+<br>
+<br>
+</body>
+</html>
